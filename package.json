@@ -11,7 +11,7 @@
   "author": "Bogdan Nechyporenko",
   "license": "ISC",
   "dependencies": {
-    "ts-explorer": "0.0.5"
+    "ts-explorer": "0.0.7"
   },
   "devDependencies": {
     "gulp": "3.9.1",
