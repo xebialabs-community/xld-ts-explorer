@@ -37,22 +37,14 @@ yarn_install {
     args = ['--mutex', 'network']
 }
 
-jar {
-    exclude 'web/fonts'
-    exclude 'web/images'
-    exclude 'web/libs'
-    exclude 'web/web-src'
-}
-
 task createBuildDir << {
     if (!buildDir.exists()) {
         buildDir.mkdir()
     }
 }
 
-task distribution(type: Zip, dependsOn: build) {
-    from 'build/libs'
-    extension 'xldp'
+jar {
+    exclude 'web/web-src'
 }
 
 build.mustRunAfter clean
