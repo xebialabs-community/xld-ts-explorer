@@ -1,0 +1,70 @@
+buildscript {
+  repositories {
+    mavenLocal()
+    ["releases", "public"].each { r ->
+      maven {
+        url "${nexusBaseUrl}/repositories/${r}"
+        credentials {
+          username nexusUserName
+          password nexusPassword
+        }
+      }
+    }
+  }
+
+  dependencies {
+    classpath "com.xebialabs.gradle.plugins:gradle-xl-plugins-plugin:${xlPluginsPluginVersion}"
+    classpath 'com.moowork.gradle:gradle-node-plugin:1.1.1'
+    classpath 'com.xebialabs.gradle.plugins:gradle-xl-taskgraph-plugin:0.2.0'
+  }
+}
+
+import java.nio.file.Paths
+
+apply plugin: "xebialabs.root.opinions"
+apply plugin: "xebialabs.opinions"
+apply plugin: "com.xebialabs.dependency"
+apply plugin: "xebialabs.taskgraph"
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+apply plugin: 'com.moowork.gulp'
+
+group = "com.xebialabs.deployit.plugins"
+archivesBaseName = "xld-ts-explorer"
+
+//project.tasks.getByName("createPluginVersionProperties").configure { plugin = archivesBaseName }
+
+yarn_install {
+  args = ['--mutex', 'network']
+}
+
+jar {
+  exclude 'web/fonts'
+  exclude 'web/images'
+  exclude 'web/libs'
+  exclude 'web/web-src'
+}
+
+task createBuildDir << {
+  if (!buildDir.exists()) {
+    buildDir.mkdir()
+  }
+}
+
+
+build.mustRunAfter clean
+tasks['release'].mustRunAfter build
+
+node {
+  version = '7.10.0'
+  yarnVersion = '0.27.5'
+  download = true
+}
+
+idea {
+  module {
+    excludeDirs += file('node_modules')
+  }
+}
