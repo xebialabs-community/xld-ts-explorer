@@ -23,7 +23,6 @@ import java.nio.file.Paths
 
 apply plugin: "xebialabs.root.opinions"
 apply plugin: "xebialabs.opinions"
-apply plugin: "com.xebialabs.dependency"
 apply plugin: "xebialabs.taskgraph"
 
 apply plugin: 'java'
@@ -37,9 +36,11 @@ yarn_install {
     args = ['--mutex', 'network']
 }
 
-task createBuildDir << {
-    if (!buildDir.exists()) {
-        buildDir.mkdir()
+task createBuildDir {
+    doLast {
+        if (!buildDir.exists()) {
+            buildDir.mkdir()
+        }
     }
 }
 
