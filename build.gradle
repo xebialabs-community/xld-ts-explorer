@@ -50,6 +50,12 @@ jar {
 build.mustRunAfter clean
 tasks['release'].mustRunAfter build
 
+task gulpCopy(type: GulpTask) {
+    args = ["copy"]
+}
+
+processResources.dependsOn(gulpCopy)
+
 node {
     version = '7.10.0'
     yarnVersion = '0.27.5'
