@@ -1,4 +1,4 @@
-version = '1.0.0'
+version = '1.0.2'
 
 buildscript {
     repositories {
@@ -58,12 +58,14 @@ task writeNewPom {
         pom {
             project {
                 inceptionYear '2017'
-                groupId 'com.xebialabs.gradle.plugins'
+                groupId 'com.xebialabs.deployit.plugins'
                 version version
             }
         }.writeTo("pom.xml")
     }
 }
+
+build.dependsOn(writeNewPom)
 
 node {
     version = '7.10.0'
