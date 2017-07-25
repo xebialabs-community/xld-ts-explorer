@@ -1,3 +1,5 @@
+version = '1.0.0'
+
 buildscript {
     repositories {
         mavenLocal()
@@ -21,16 +23,11 @@ buildscript {
 
 import java.nio.file.Paths
 
-apply plugin: "xebialabs.root.opinions"
-apply plugin: "xebialabs.opinions"
-apply plugin: "xebialabs.taskgraph"
-
-apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'maven'
 
 apply plugin: 'com.moowork.gulp'
-
-group = "com.xebialabs.deployit.plugins"
 
 yarn_install {
     args = ['--mutex', 'network']
@@ -49,13 +46,24 @@ jar {
 }
 
 build.mustRunAfter clean
-tasks['release'].mustRunAfter build
 
 task gulpCopy(type: GulpTask) {
     args = ["copy"]
 }
 
 processResources.dependsOn(gulpCopy)
+
+task writeNewPom {
+    doLast {
+        pom {
+            project {
+                inceptionYear '2017'
+                groupId 'com.xebialabs.gradle.plugins'
+                version version
+            }
+        }.writeTo("pom.xml")
+    }
+}
 
 node {
     version = '7.10.0'
@@ -66,5 +74,8 @@ node {
 idea {
     module {
         excludeDirs += file('node_modules')
+        excludeDirs += file('build')
+        excludeDirs += file('.idea')
+        excludeDirs += file('.gradle')
     }
 }
