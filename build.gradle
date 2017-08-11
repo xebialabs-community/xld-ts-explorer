@@ -1,4 +1,4 @@
-version = '1.0.3'
+version = '1.0.4'
 
 buildscript {
     repositories {
@@ -68,7 +68,7 @@ task writeNewPom {
 build.dependsOn(writeNewPom)
 
 node {
-    version = '8.2.1'
+    version = '8.3.0'
     yarnVersion = '0.27.5'
     download = true
 }
