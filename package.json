@@ -1,6 +1,6 @@
 {
   "name": "xld-ts-explorer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "XLD UI Type System explorer Plugin",
   "main": "index.js",
   "keywords": [
@@ -11,7 +11,7 @@
   "author": "Bogdan Nechyporenko",
   "license": "ISC",
   "dependencies": {
-    "ts-explorer": "0.0.16"
+    "ts-explorer": "0.0.17"
   },
   "devDependencies": {
     "gulp": "3.9.1",

@@ -1,3 +1,4 @@
-bundledOutputs/*
+bundledOutputs/
+!bundledOutputs/README.md
 fonts/
 images/
