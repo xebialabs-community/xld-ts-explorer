@@ -1193,9 +1193,9 @@ time-stamp@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
 
-ts-explorer@0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/ts-explorer/-/ts-explorer-0.0.19.tgz#da462fe3e801a11be7d789e5e0aa7c68e288f716"
+ts-explorer@0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/ts-explorer/-/ts-explorer-0.0.20.tgz#1feeb098cf826414b2a70f441ad49e3f3187c45c"
   dependencies:
     bootstrap "3.3.7"
     bs-director "^0.0.1"
