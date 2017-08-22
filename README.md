@@ -1,11 +1,13 @@
+### How to build the plugin
 
-```
-git clone git@github.com:acierto/ts-explorer.git
-cd ts-explorer
-npm install
-npm start
-# in another tab
-npm run build
-```
+Actually it is quite easy, you just need to run `./gradlew build`
 
-After you see the webpack compilation succeed (the `npm run build` step), open up the nested html files in `src/*` (**no server needed!**). Then modify whichever file in `src` and refresh the page to see the changes.
+This repository is just a wrapper to create an XLD plugin from 
+[ts-explorer](https://github.com/acierto/ts-explorer), it loads the output and 
+create a plugin in `build/libs` folder. 
+So you don't need to install OCaml to build the plugin.
+
+When you copy it to `plugins` folder in XLD server instance and restart the server, 
+in HTML UI you will see extra tab named 'TS'.
+
+![alt text](https://raw.githubusercontent.com/xebialabs-community/xld-ts-explorer/master/ts-plugin.png "TS Plugin")
