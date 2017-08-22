@@ -7,6 +7,8 @@ This repository is just a wrapper to create an XLD plugin from
 create a plugin in `build/libs` folder. 
 So you don't need to install OCaml to build the plugin.
 
+### Where to find it in XLD
+
 When you copy it to `plugins` folder in XLD server instance and restart the server, 
 in HTML UI you will see extra tab named 'TS'.
 
