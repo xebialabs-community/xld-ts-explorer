@@ -3,9 +3,8 @@
 Actually it is quite easy, you just need to run `./gradlew build`
 
 This repository is just a wrapper to create an XLD plugin from 
-[ts-explorer](https://github.com/acierto/ts-explorer), it loads the output and 
+[type-system-explorer](https://github.com/acierto/type-system-explorer), it loads the output and 
 create a plugin in `build/libs` folder. 
-So you don't need to install OCaml to build the plugin.
 
 ### Where to find it in XLD
 

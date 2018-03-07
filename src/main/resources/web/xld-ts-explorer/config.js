@@ -1,1 +1,0 @@
-var tsConfig = {id: 'ts-explorer', url: '/deployit/metadata/type'};
