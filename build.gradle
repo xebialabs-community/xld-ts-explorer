@@ -1,4 +1,4 @@
-version = '1.0.14'
+version = '1.0.17'
 
 buildscript {
     repositories {
@@ -14,11 +14,11 @@ buildscript {
         }
     }
 
-  dependencies {
-    classpath "com.xebialabs.gradle.plugins:gradle-xl-plugins-plugin:${xlPluginsPluginVersion}"
-    classpath 'com.moowork.gradle:gradle-node-plugin:1.2.0'
-    classpath 'com.xebialabs.gradle.plugins:gradle-xl-taskgraph-plugin:0.2.0'
-  }
+    dependencies {
+        classpath "com.xebialabs.gradle.plugins:gradle-xl-plugins-plugin:${xlPluginsPluginVersion}"
+        classpath 'com.moowork.gradle:gradle-node-plugin:1.2.0'
+        classpath 'com.xebialabs.gradle.plugins:gradle-xl-taskgraph-plugin:0.2.0'
+    }
 }
 
 import java.nio.file.Paths
@@ -47,11 +47,15 @@ jar {
 
 build.mustRunAfter clean
 
+task gulpBump(type: GulpTask, dependsOn: [yarn_install]) {
+    args = ["bump"]
+}
+
 task gulpCopy(type: GulpTask, dependsOn: [yarn_install]) {
     args = ["copy"]
 }
 
-processResources.dependsOn(gulpCopy)
+processResources.dependsOn([gulpBump, gulpCopy])
 
 task writeNewPom {
     doLast {
@@ -66,11 +70,21 @@ task writeNewPom {
 
 }
 
-build.dependsOn(writeNewPom)
+task increment {
+    doFirst {
+        String minor = version.substring(version.lastIndexOf('.') + 1)
+        int m = minor.toInteger() + 1
+        String major = version.substring(0, version.length() - m.toString().length())
+        String s = buildFile.getText().replaceFirst("version = '$version'", "version = '" + major + m + "'")
+        buildFile.setText(s)
+    }
+}
+
+build.dependsOn([clean, increment, writeNewPom])
 
 node {
-    version = '9.5.0'
-    yarnVersion = '1.3.2'
+    version = '9.8.0'
+    yarnVersion = '1.5.1'
     download = true
 }
 
