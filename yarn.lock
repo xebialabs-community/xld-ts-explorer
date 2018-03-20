@@ -670,13 +670,13 @@ graceful-fs@~1.2.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
 
-gulp-copy@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-copy/-/gulp-copy-1.0.0.tgz#3d4aca4e1a6deb4aa2b2f36c38c853f295c8baca"
+gulp-copy@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-copy/-/gulp-copy-1.1.0.tgz#812ad03884c24fe04d92640beef51cfd49fc4675"
   dependencies:
-    gulp "^3.9.0"
-    gulp-util "^3.0.0"
-    through2 "^2.0.0"
+    gulp "^3.9.1"
+    plugin-error "^0.1.2"
+    through2 "^2.0.3"
 
 gulp-git@^2.5.0:
   version "2.5.2"
@@ -748,7 +748,7 @@ gulp-util@^3.0.0:
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
-gulp@3.9.1, gulp@^3.9.0:
+gulp@3.9.1, gulp@^3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/gulp/-/gulp-3.9.1.tgz#571ce45928dd40af6514fc4011866016c13845b4"
   dependencies:
@@ -1853,16 +1853,16 @@ tmp@^0.0.33:
   dependencies:
     os-tmpdir "~1.0.2"
 
-type-system-explorer@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/type-system-explorer/-/type-system-explorer-0.0.6.tgz#72fd5fffd8fa506b889c229ac0eca37c5c99879c"
+type-system-explorer@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/type-system-explorer/-/type-system-explorer-0.0.7.tgz#d19be64cdef9efbfc494aca61c32494ad6eb3b66"
   dependencies:
     bootstrap "4.0.0"
     bootstrap-vue "2.0.0-rc.1"
     debounce "1.1.0"
     font-awesome "4.7.0"
     ramda "0.25.0"
-    vue "2.5.13"
+    vue "2.5.16"
     vue-multiselect "2.0.8"
     vue-router "3.0.1"
     vue-ts-locale "1.0.2"
@@ -1957,7 +1957,11 @@ vue-ts-locale@1.0.2:
     underscore "^1.8.3"
     vue "^2.2.6"
 
-vue@2.5.13, vue@^2.2.6:
+vue@2.5.16:
+  version "2.5.16"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
+
+vue@^2.2.6:
   version "2.5.13"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.13.tgz#95bd31e20efcf7a7f39239c9aa6787ce8cf578e1"
 
