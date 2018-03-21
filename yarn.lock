@@ -148,7 +148,7 @@ beeper@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
 
-biguint-format@^1.0.0:
+biguint-format@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/biguint-format/-/biguint-format-1.0.0.tgz#e1863f47dfdfed316cc95726e4cd9d1994fc8c5e"
 
@@ -729,16 +729,6 @@ gulp-json-editor@^2.2.1:
     detect-indent "^5.0.0"
     js-beautify "^1.7.5"
     plugin-error "^1.0.1"
-    through2 "^2.0.3"
-
-gulp-mustache@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/gulp-mustache/-/gulp-mustache-3.0.1.tgz#642e5940b1a7162587e7685a9460ab7f725277a2"
-  dependencies:
-    escape-string-regexp "^1.0.5"
-    mustache "^2.3.0"
-    plugin-error "^0.1.2"
-    replace-ext "^1.0.0"
     through2 "^2.0.3"
 
 gulp-prompt@^1.0.1:
@@ -1331,7 +1321,7 @@ multipipe@^0.1.2:
   dependencies:
     duplexer2 "0.0.2"
 
-mustache@2.3.0, mustache@^2.3.0:
+mustache@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/mustache/-/mustache-2.3.0.tgz#4028f7778b17708a489930a6e52ac3bca0da41d0"
 

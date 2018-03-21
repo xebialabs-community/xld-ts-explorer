@@ -4,6 +4,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.xebialabs.deployit.plugins</groupId>
   <artifactId>xld-ts-explorer</artifactId>
-  <version>1.0.23</version>
+  <version>1.0.24</version>
   <inceptionYear>2017</inceptionYear>
 </project>
