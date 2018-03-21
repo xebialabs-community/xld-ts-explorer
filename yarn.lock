@@ -1913,9 +1913,9 @@ tmp@^0.0.33:
   dependencies:
     os-tmpdir "~1.0.2"
 
-type-system-explorer@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/type-system-explorer/-/type-system-explorer-0.0.8.tgz#0ceb387f1a8a3c53eb43920e3b1fa78cdb7d82aa"
+type-system-explorer@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/type-system-explorer/-/type-system-explorer-0.0.9.tgz#be8a188a78f209e98992c1836659f7a6358d5d3f"
   dependencies:
     bootstrap "4.0.0"
     bootstrap-vue "2.0.0-rc.1"
