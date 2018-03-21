@@ -51,11 +51,11 @@ task gulpBump(type: GulpTask, dependsOn: [yarn_install]) {
     args = ["bump"]
 }
 
-task gulpCopy(type: GulpTask, dependsOn: [yarn_install]) {
-    args = ["copy"]
+task gulpPrepareDist(type: GulpTask, dependsOn: [yarn_install]) {
+    args = ["prepare-dist"]
 }
 
-processResources.dependsOn([gulpBump, gulpCopy])
+processResources.dependsOn([gulpBump, gulpPrepareDist])
 
 task writeNewPom {
     doLast {
