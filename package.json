@@ -14,9 +14,13 @@
     "type-system-explorer": "0.0.8"
   },
   "devDependencies": {
+    "biguint-format": "1.0.0",
+    "flake-idgen": "1.1.0",
     "gulp": "3.9.1",
     "gulp-copy": "1.1.0",
     "gulp-release-it": "1.1.14",
+    "html-template-tag": "2.0.0",
+    "mustache": "2.3.0",
     "rimraf": "2.6.2"
   }
 }
