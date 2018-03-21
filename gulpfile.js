@@ -19,7 +19,7 @@ gulp.task('generate-xl-ui-plugin', function (cb) {
     <menu id="ts-explorer-plugin" label="TS" uri="xld-ts-explorer/index.html?${nextId()}" weight="20" />
 </plugin>`;
 
-    fs.writeFile(`${projectDir}/src/main/resources/web/xl-ui-plugin.xml`, newFileContent, function (err) {
+    fs.writeFile(`${projectDir}/src/main/resources/xl-ui-plugin.xml`, newFileContent, function (err) {
         if (err) {
             throw err;
         }
