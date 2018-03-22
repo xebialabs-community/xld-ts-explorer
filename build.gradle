@@ -1,4 +1,4 @@
-version = '1.0.27'
+version = '1.0.30'
 
 buildscript {
     repositories {
@@ -83,7 +83,7 @@ task increment {
 build.dependsOn([clean, increment, writeNewPom])
 
 node {
-    version = '9.8.0'
+    version = '9.9.0'
     yarnVersion = '1.5.1'
     download = true
 }

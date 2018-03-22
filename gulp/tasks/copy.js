@@ -1,10 +1,10 @@
 import gulp from 'gulp';
+import {webDir} from '../utils/paths';
 
 const libDist = 'node_modules/type-system-explorer/dist/**';
-const pluginDest = 'src/main/resources/web/xld-ts-explorer';
 
 gulp.task('copy', () =>
     gulp
         .src(libDist)
-        .pipe(gulp.dest(pluginDest))
+        .pipe(gulp.dest(webDir))
 );
