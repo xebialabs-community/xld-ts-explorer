@@ -1,6 +1,6 @@
 {
   "name": "xld-ts-explorer",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "XLD UI Type System explorer Plugin",
   "main": "index.js",
   "keywords": [
